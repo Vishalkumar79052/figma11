@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Figma Assignment Replica</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet"href="style.css">
+</head>
+<body class="bg-gray-50 min-h-screen p-4 md:p-8">
+
+    <div id="app" class="mx-auto max-w-7xl grid grid-cols-1 lg:grid-cols-3 gap-8">
+
+        <div class="hidden lg:block lg:col-span-1">
+            </div>
+
+        <div class="col-span-1 lg:col-span-2 space-y-8">
+
+            <div id="profile-widget" class="bg-white shadow-lg rounded-xl p-6">
+                
+                <div class="flex items-center space-x-4 mb-6">
+                    <div class="w-16 h-16 bg-blue-200 rounded-full border-2 border-white shadow-md">
+                        </div>
+                    <div>
+                        <h2 class="text-xl font-bold">Vishal Maurya</h2>
+                        <p class="text-gray-500 text-sm">Frontend Developer</p>
+                    </div>
+                </div>
+
+                <div class="border-b border-gray-200">
+                    <div id="tabs-container" class="flex space-x-4 -mb-px">
+                        <button data-tab="about me" class="tab-button text-sm font-medium py-2 px-1 text-indigo-600 border-b-2 border-indigo-600 transition-colors vishal">About Me</button>
+                        <button data-tab="experiences" class="tab-button text-sm font-medium py-2 px-1 text-gray-500 hover:text-gray-700 transition-colors">Experiences</button>
+                        <button data-tab="recommended" class="tab-button text-sm font-medium py-2 px-1 text-gray-500 hover:text-gray-700 transition-colors">Recommended</button>
+                    </div>
+                </div>
+
+                <div id="tab-content" class="pt-4 text-gray-700">
+                    <p data-content="about me" class="tab-content">This is the content for the About Me tab, which is visible by default.</p>
+                    <p data-content="experiences" class="tab-content hidden">Details about professional experiences will be shown here.</p>
+                    <p data-content="recommended" class="tab-content hidden">A list of recommended resources or people goes here.</p>
+                </div>
+
+            </div>
+
+            <div id="gallery-widget" class="bg-white shadow-lg rounded-xl p-6">
+                <h2 class="text-lg font-semibold mb-4">Gallery</h2>
+                
+                <div id="image-grid" class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                    <div class="h-24 bg-gray-300 rounded-lg"></div>
+                    <div class="h-24 bg-gray-300 rounded-lg"></div>
+                    <div class="h-24 bg-gray-300 rounded-lg"></div>
+                </div>
+                
+                <button id="add-image-button" class="mt-6 w-full py-2 bg-indigo-500 text-white font-semibold rounded-lg hover:bg-indigo-600 transition-colors shadow-md">
+                    + Add Image
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

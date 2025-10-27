@@ -1,0 +1,154 @@
+
+body {
+  font-family: 'Inter', 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #161616 0%, #151515 100%);
+  color: #333;
+  transition: background 0.3s ease;
+}
+
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #5f5d5d;
+}
+::-webkit-scrollbar-thumb {
+  background: #f9f9fb;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #bcc2f7;
+}
+
+#profile-widget {
+  background: rgba(113, 111, 111, 0.8);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(229, 231, 235, 0.5);
+  transition: all 0.3s ease;
+}
+
+#profile-widget:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 25px rgba(66, 62, 62, 0.07);
+}
+
+
+#profile-widget .w-16.h-16 {
+  background: linear-gradient(135deg, #324249, #9bcce8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(15, 15, 15);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+
+#tabs-container {
+  border-bottom: 1px solid #131314;
+}
+
+.tab-button {
+  position: relative;
+  cursor: pointer;
+  font-size: 1.8rem  !important;
+  color: white;
+}
+
+
+
+.tab-button::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #f4f4f6;
+  transition: width 0.3s ease;
+}
+
+.tab-button:hover::after,
+.tab-button.text-indigo-600::after {
+  width: 100%;
+}
+
+.tab-button:hover {
+  color: #101010;
+}
+
+
+.tab-content {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  font-size: 1.2rem  !important;
+  color: rgb(148, 145, 145);
+}
+
+.tab-content:not(.hidden) {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+
+#gallery-widget {
+  background: rgb(83, 82, 82);
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+}
+
+#gallery-widget:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+}
+
+
+#image-grid div {
+  background: linear-gradient(145deg, #222323, #444548);
+  border-radius: 0.75rem;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.25s ease;
+}
+
+#image-grid div:hover {
+  transform: scale(1.05);
+  background: linear-gradient(145deg, #818cf8, #6366f1);
+}
+
+
+#add-image-button {
+  background: linear-gradient(135deg, #717179, #8a8999);
+  box-shadow: 0 4px 10px rgba(79, 70, 229, 0.3);
+  transition: all 0.3s ease;
+}
+
+#add-image-button:hover {
+  background: linear-gradient(135deg, #4f46e5, #4338ca);
+  box-shadow: 0 6px 14px rgba(79, 70, 229, 0.4);
+  transform: translateY(-1px);
+}
+
+
+@media (max-width: 768px) {
+  #profile-widget, #gallery-widget {
+    padding: 1.25rem;
+  }
+
+  .tab-button {
+    font-size: 0.85rem;
+  }
+}
+
+
+#app {
+  animation: fadeIn 0.7s ease forwards;
+  opacity: 0;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
